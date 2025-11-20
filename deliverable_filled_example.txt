@@ -1,0 +1,7 @@
+Example final interpretation (hypothetical — replace with actual numbers after running):
+
+- EDA: 800 subjects, event rate 42.5%. Age mean 60 (sd 10). No missing data.
+- Kaplan-Meier: estimated 12-month survival = 0.72 (95% CI: 0.68-0.76). 24-month survival = 0.58 (95% CI: 0.53-0.63).
+- Cox PH: Treatment B associated with lower hazard (HR=0.67, 95% CI: 0.53-0.85, p=0.001). Biomarker positive associated with higher hazard (HR=1.42 per SD, 95% CI: 1.20-1.68, p<0.001). Age associated with small increased hazard (HR=1.02 per year, p=0.01).
+- PH test: Global test p=0.45 (no evidence to reject PH).
+- Conclusion: Treatment B reduces hazard; biomarker and age increase hazard. Recommend further validation in an external dataset.

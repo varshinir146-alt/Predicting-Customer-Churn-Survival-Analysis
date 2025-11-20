@@ -1,23 +1,31 @@
-# Survival Analysis Report (Simulated Data)
-Generated: 2025-11-19T07:45:07.606431 UTC
+# Project Report - Survival Analysis
 
-## Dataset
-- Rows: 1000
-- Columns: 6
-- Key columns: tenure (duration), churn (event), monthly_charges, contract_type, internet_service, gender
+## 1. Objective
+Simulate a survival dataset and demonstrate end-to-end analysis: EDA, Kaplan-Meier estimation, Cox proportional hazards modeling, and interpretation.
 
-## EDA Summary (auto-generated)
-- Numeric summaries saved in `eda_summary.txt`.
-- Monthly charges: mean=73.37, median=72.53
+## 2. Data
+Provided simulated_survival_data.csv with variables:
+- id: subject id
+- age: age in years (integer)
+- sex: 0 female, 1 male
+- treatment: A or B
+- biomarker: continuous standard-normal biomarker
+- time: observed follow-up time (same units)
+- event: event indicator (1=event, 0=censored)
 
-## Kaplan-Meier
-- Plots: `km_by_contract_type.png`, `km_by_charge_quartile.png`
-- Compare survival across `contract_type` and monthly charge quartiles.
+## 3. Methods
+- EDA: descriptive statistics and missingness
+- Kaplan-Meier: overall survival curve and survival probabilities at selected times
+- Cox PH model: covariates age, sex, biomarker, treatment (treatment_B indicator)
+- PH test: lifelines' proportional_hazard_test
 
-## Cox PH model
-- Script fits a Cox model with predictors: monthly_charges + contract_type + internet_service + gender.
-- Summary saved: `cox_summary.csv`
-- Top predictors saved: `top_predictors.csv`
+## 4. Results (fill after running run_analysis_full.py)
+- See results/ for generated text deliverables and plots.
 
-## Notes
-This package uses a simulated dataset. Replace `dataset.csv` with the real file and run `run_analysis.py` or the included notebook to reproduce results on real data.
+## 5. Interpretation guidance
+- Report hazard ratios with 95% CI and p-values
+- Discuss clinical relevance and potential confounding
+- If PH assumption violated: consider stratification or time-varying effects
+
+## 6. Reproducibility
+- Script is deterministic for provided simulated data.
